@@ -1,0 +1,91 @@
+
+:root{
+  --bg: #0b1020;
+  --surface: #11172a;
+  --text: #e6ebff;
+  --muted: #a9b1d6;
+  --brand1:#7C3AED;
+  --brand2:#06B6D4;
+  --ring: #7c3aed44;
+  --card: #121a31;
+  --ok:#16a34a;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color:var(--text);
+  background: radial-gradient(1200px 600px at 10% -10%, #1a2242 10%, transparent), radial-gradient(1000px 500px at 100% 0%, #0c1639 10%, transparent), var(--bg);
+  line-height:1.6;
+}
+a{color:#b0d7ff;text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto;display:block}
+
+.site-header{
+  position:sticky; top:0; z-index:50;
+  display:flex; align-items:center; gap:1rem;
+  padding: .8rem 1rem;
+  backdrop-filter: blur(10px);
+  background: #0b1020cc;
+  border-bottom: 1px solid #1e2a4a;
+}
+.brand{display:flex; align-items:center; gap:.5rem; font-weight:700; color:white}
+.site-nav{display:flex; gap:.6rem; align-items:center; margin-left:auto}
+.site-nav a{padding:.45rem .7rem; border-radius:.5rem}
+.site-nav .btn{background:linear-gradient(90deg,var(--brand1),var(--brand2)); color:white; border:0}
+.theme-toggle{background:#1c2544; color:#fff; border:0; padding:.45rem .6rem; border-radius:.5rem; cursor:pointer}
+.nav-toggle{display:none; background:#1c2544; color:white; border:0; padding:.5rem .6rem; border-radius:.5rem;}
+
+.hero{padding:5rem 1rem 3rem; text-align:center}
+.hero-inner{max-width:900px; margin:0 auto}
+.hero h1{font-size:clamp(2rem, 5vw, 3.2rem); line-height:1.1; margin:.3rem 0 .6rem}
+.cta{display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap; margin:1rem 0 1.2rem}
+.btn{border:1px solid #2a3761; background:#11172a; color:#e6ebff; padding:.6rem .9rem; border-radius:.6rem; font-weight:600; cursor:pointer}
+.btn-primary{background:linear-gradient(90deg,var(--brand1),var(--brand2)); border:0}
+
+.badges{display:flex; gap:.6rem; list-style:none; padding:0; justify-content:center; flex-wrap:wrap; color:#d7e0ff}
+.badges li{background:#101934; border:1px solid #1e2a4a; padding:.4rem .6rem; border-radius:999px}
+
+.features, .projects, .testimonials, .faq{padding:2rem 1rem; max-width:1100px; margin:0 auto}
+.features h2, .projects h2, .testimonials h2, .faq h2{ text-align:center }
+.grid{display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:1rem}
+.card{background:var(--card); border:1px solid #1e2a4a; padding:1rem; border-radius:.8rem}
+.card h3{margin-top:0}
+.more{display:inline-block; margin-top:.5rem}
+
+.timeline{max-width:700px; margin:0 auto; padding-left:1rem}
+.timeline li{margin:.6rem 0}
+
+.quote{background:#0f1838; border-left:4px solid var(--brand2); padding:1rem; border-radius:.4rem}
+
+.content{max-width:1100px; margin:0 auto; padding:2rem 1rem}
+.cards{display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:1rem}
+
+.playground{display:grid; gap:1rem}
+.editors{display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:1rem}
+.editors textarea{min-height:220px; background:#0b1431; color:#e6ebff; border:1px solid #1e2a4a; border-radius:.6rem; padding:.8rem; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
+.actions{display:flex; gap:.5rem; align-items:center; flex-wrap:wrap}
+.share-out{flex:1; min-width:200px; background:#0b1431; color:#d9e4ff; border:1px solid #1e2a4a; border-radius:.4rem; padding:.5rem}
+#preview{width:100%; height:420px; background:white; border:1px solid #1e2a4a; border-radius:.6rem}
+
+.pricing{display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:1rem}
+.plan{background:var(--card); border:1px solid #1e2a4a; border-radius:.8rem; padding:1rem; text-align:center}
+.plan.featured{outline:2px solid var(--brand2);}
+
+.contact-form input, .contact-form textarea{
+  width:100%; background:#0b1431;color:#e6ebff;border:1px solid #1e2a4a;border-radius:.6rem;padding:.7rem
+}
+.row{display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:1rem}
+
+.site-footer{margin-top:3rem; padding:2rem 1rem; border-top:1px solid #1e2a4a; background:#0b1020}
+.footer-grid{display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:1rem; max-width:1100px; margin:0 auto}
+.signup .row{margin-top:.5rem}
+.small{opacity:.8; text-align:center}
+
+@media (max-width: 800px){
+  .nav-toggle{display:block}
+  .site-nav{display:none; flex-direction:column; position:absolute; top:60px; right:10px; background:#0b1020; border:1px solid #1e2a4a; padding:.5rem; border-radius:.6rem}
+  .site-nav.open{display:flex}
+}
