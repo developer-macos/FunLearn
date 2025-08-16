@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/logo.svg" as="image">
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/app.js"></script>
+
+  <title>FunLearn — Learn HTML, CSS & JS the funny way</title>
+  <meta name="description" content="A playful, project-based way to learn HTML, CSS and JavaScript. Build a real website from zero to hero with jokes, games and badges." />
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <img src="assets/logo.svg" alt="FunLearn logo" width="32" height="32"/>
+    <span>FunLearn</span>
+  </a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+  <nav id="site-nav" class="site-nav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="lessons.html">Curriculum</a>
+    <a href="playground.html">Playground</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a class="btn" href="contact.html">Contact</a>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Learn to build websites — while laughing.</h1>
+      <p>From zero to ship-it: HTML, CSS & JavaScript explained with mini games, memes, and hands‑on projects.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="lessons.html">Start the curriculum</a>
+        <a class="btn" href="playground.html">Try the playground</a>
+      </div>
+      <ul class="badges" aria-label="Fun badges">
+        <li>🏆 Meme Master</li>
+        <li>🧩 CSS Ninja</li>
+        <li>🛠 JS Tinkerer</li>
+        <li>🚀 Ship a Portfolio</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Everything you need to build a website</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>1) HTML: the skeleton</h3>
+        <p>Structure pages with semantic tags, forms, accessible nav, and SEO basics.</p>
+        <a href="lessons.html#html" class="more">Explore HTML</a>
+      </article>
+      <article class="card">
+        <h3>2) CSS: the style</h3>
+        <p>Flexbox and Grid, responsive tricks, animations, and design systems.</p>
+        <a href="lessons.html#css" class="more">Explore CSS</a>
+      </article>
+      <article class="card">
+        <h3>3) JavaScript: the brain</h3>
+        <p>DOM, events, fetch, modules, and a sprinkle of fun mini‑games.</p>
+        <a href="lessons.html#js" class="more">Explore JavaScript</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>Project path</h2>
+    <ol class="timeline">
+      <li><strong>Week 1:</strong> Personal site</li>
+      <li><strong>Week 2:</strong> Product landing page</li>
+      <li><strong>Week 3:</strong> Blog + markdown converter</li>
+      <li><strong>Week 4:</strong> Portfolio & deployment</li>
+    </ol>
+  </section>
+
+  <section class="testimonials">
+    <h2>What learners say</h2>
+    <div class="grid">
+      <blockquote class="quote">
+        <p>“I finally get CSS Grid. Also I laughed at least 3.14 times per lesson.”</p>
+        <cite>— Sam, junior dev</cite>
+      </blockquote>
+      <blockquote class="quote">
+        <p>“The Playground made JavaScript click. I built my first game!”</p>
+        <cite>— Priya, student</cite>
+      </blockquote>
+      <blockquote class="quote">
+        <p>“The jokes are dad‑level, but the content is top‑tier.”</p>
+        <cite>— Alex, designer</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>FAQ</h2>
+    <details>
+      <summary>Is this beginner friendly?</summary>
+      <p>Absolutely. No prior experience required. If you can click a mouse, you can click “Deploy”.</p>
+    </details>
+    <details>
+      <summary>Do I need special software?</summary>
+      <p>Nope. A browser and a text editor are enough. We’ll show you both.</p>
+    </details>
+    <details>
+      <summary>How is learning “funny”?</summary>
+      <p>Each module includes memes, short games, and small “LOL challenges” to reinforce concepts.</p>
+    </details>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <img src="assets/logo.svg" alt="" width="32" height="32"/>
+      <strong>FunLearn</strong>
+      <p>Learn HTML, CSS & JS the funny way.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="lessons.html">Curriculum</a>
+      <a href="playground.html">Playground</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <form id="signup" class="signup" aria-label="Newsletter signup">
+      <label for="email">Get tips & jokes in your inbox</label>
+      <div class="row">
+        <input id="email" name="email" type="email" placeholder="you@awesome.dev" required />
+        <button class="btn">Subscribe</button>
+      </div>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+  </div>
+  <p class="small">© <span id="year"></span> FunLearn. Built with vanilla HTML, CSS & JS.</p>
+</footer>
+
+</body>
+</html>

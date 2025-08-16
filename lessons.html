@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/logo.svg" as="image">
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/app.js"></script>
+
+  <title>Curriculum — FunLearn</title>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <img src="assets/logo.svg" alt="FunLearn logo" width="32" height="32"/>
+    <span>FunLearn</span>
+  </a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+  <nav id="site-nav" class="site-nav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="lessons.html">Curriculum</a>
+    <a href="playground.html">Playground</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a class="btn" href="contact.html">Contact</a>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+  </nav>
+</header>
+
+<main class="content">
+  <h1>Curriculum</h1>
+  <p>Step‑by‑step lessons. Each topic ends with a tiny challenge and a bad joke you’ll secretly enjoy.</p>
+
+  <section id="html">
+    <h2>HTML Essentials</h2>
+    <div class="cards">
+      <article class="card"><h3>Semantic tags</h3><p>header, nav, main, section, article, aside, footer</p></article>
+      <article class="card"><h3>Links & images</h3><p>a, img, picture, favicon, accessibility</p></article>
+      <article class="card"><h3>Lists & tables</h3><p>ul/ol, dl, table basics</p></article>
+      <article class="card"><h3>Forms</h3><p>input types, labels, validation, a11y</p></article>
+      <article class="card"><h3>SEO basics</h3><p>titles, descriptions, headings, sitemaps</p></article>
+    </div>
+  </section>
+
+  <section id="css">
+    <h2>CSS Essentials</h2>
+    <div class="cards">
+      <article class="card"><h3>Selectors & Cascade</h3><p>specificity, inheritance, custom props</p></article>
+      <article class="card"><h3>Layout</h3><p>Flexbox, Grid, responsive units</p></article>
+      <article class="card"><h3>Design</h3><p>Typography, spacing, color systems</p></article>
+      <article class="card"><h3>Effects</h3><p>Transforms, transitions, animations</p></article>
+      <article class="card"><h3>Components</h3><p>Buttons, cards, modals, forms</p></article>
+    </div>
+  </section>
+
+  <section id="js">
+    <h2>JavaScript Essentials</h2>
+    <div class="cards">
+      <article class="card"><h3>Language basics</h3><p>values, functions, scope, modules</p></article>
+      <article class="card"><h3>DOM & Events</h3><p>query, create, listen, delegate</p></article>
+      <article class="card"><h3>Fetch & APIs</h3><p>JSON, async/await, errors</p></article>
+      <article class="card"><h3>Storage</h3><p>localStorage, IndexedDB (light)</p></article>
+      <article class="card"><h3>Mini‑games</h3><p>Quiz, Whack‑a‑Bug, Type Racer</p></article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Capstone: Build & Deploy</h2>
+    <ul>
+      <li>Design a brand & layout system</li>
+      <li>Create a multi‑page site</li>
+      <li>Add interactivity with JS</li>
+      <li>Ship to a free host (GitHub Pages/Netlify)</li>
+    </ul>
+    <p><a class="btn btn-primary" href="playground.html">Open the Playground</a></p>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <img src="assets/logo.svg" alt="" width="32" height="32"/>
+      <strong>FunLearn</strong>
+      <p>Learn HTML, CSS & JS the funny way.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="lessons.html">Curriculum</a>
+      <a href="playground.html">Playground</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <form id="signup" class="signup" aria-label="Newsletter signup">
+      <label for="email">Get tips & jokes in your inbox</label>
+      <div class="row">
+        <input id="email" name="email" type="email" placeholder="you@awesome.dev" required />
+        <button class="btn">Subscribe</button>
+      </div>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+  </div>
+  <p class="small">© <span id="year"></span> FunLearn. Built with vanilla HTML, CSS & JS.</p>
+</footer>
+
+</body>
+</html>

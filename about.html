@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/logo.svg" as="image">
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/app.js"></script>
+
+  <title>About — FunLearn</title>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <img src="assets/logo.svg" alt="FunLearn logo" width="32" height="32"/>
+    <span>FunLearn</span>
+  </a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+  <nav id="site-nav" class="site-nav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="lessons.html">Curriculum</a>
+    <a href="playground.html">Playground</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a class="btn" href="contact.html">Contact</a>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+  </nav>
+</header>
+
+<main class="content">
+  <h1>About FunLearn</h1>
+  <p>We’re a tiny studio obsessed with making code less scary and more silly. We believe laughter helps you learn faster.</p>
+
+  <h2>Our teaching rules</h2>
+  <ol>
+    <li>Explain with real examples</li>
+    <li>Show, don’t lecture</li>
+    <li>Practice > theory</li>
+    <li>Ship something every week</li>
+  </ol>
+</main>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <img src="assets/logo.svg" alt="" width="32" height="32"/>
+      <strong>FunLearn</strong>
+      <p>Learn HTML, CSS & JS the funny way.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="lessons.html">Curriculum</a>
+      <a href="playground.html">Playground</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <form id="signup" class="signup" aria-label="Newsletter signup">
+      <label for="email">Get tips & jokes in your inbox</label>
+      <div class="row">
+        <input id="email" name="email" type="email" placeholder="you@awesome.dev" required />
+        <button class="btn">Subscribe</button>
+      </div>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+  </div>
+  <p class="small">© <span id="year"></span> FunLearn. Built with vanilla HTML, CSS & JS.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/logo.svg" as="image">
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/app.js"></script>
+
+  <title>Playground — FunLearn</title>
+  <script defer src="js/playground.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <img src="assets/logo.svg" alt="FunLearn logo" width="32" height="32"/>
+    <span>FunLearn</span>
+  </a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+  <nav id="site-nav" class="site-nav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="lessons.html">Curriculum</a>
+    <a href="playground.html">Playground</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a class="btn" href="contact.html">Contact</a>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+  </nav>
+</header>
+
+<main class="content">
+  <h1>Playground</h1>
+  <p>Type HTML, CSS, and JS and see the result live. Break stuff safely. It’s encouraged.</p>
+
+  <div class="playground">
+    <div class="editors">
+      <label>HTML
+        <textarea id="htmlCode" spellcheck="false">&lt;h1&gt;Hello FunLearner 👋&lt;/h1&gt;
+&lt;p&gt;Change me and hit Run!&lt;/p&gt;</textarea>
+      </label>
+
+      <label>CSS
+        <textarea id="cssCode" spellcheck="false">body { font-family: system-ui, sans-serif; }
+h1 { text-align:center; }</textarea>
+      </label>
+
+      <label>JS
+        <textarea id="jsCode" spellcheck="false">document.querySelector('h1').onclick = () =&gt; alert('You clicked the title!')</textarea>
+      </label>
+    </div>
+
+    <div class="actions">
+      <button id="runBtn" class="btn btn-primary">Run ▶</button>
+      <button id="resetBtn" class="btn">Reset</button>
+      <button id="shareBtn" class="btn">Share link</button>
+      <input id="shareOut" class="share-out" readonly aria-label="Sharable URL"/>
+    </div>
+
+    <iframe id="preview" title="Live preview" sandbox="allow-scripts allow-same-origin"></iframe>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <img src="assets/logo.svg" alt="" width="32" height="32"/>
+      <strong>FunLearn</strong>
+      <p>Learn HTML, CSS & JS the funny way.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="lessons.html">Curriculum</a>
+      <a href="playground.html">Playground</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <form id="signup" class="signup" aria-label="Newsletter signup">
+      <label for="email">Get tips & jokes in your inbox</label>
+      <div class="row">
+        <input id="email" name="email" type="email" placeholder="you@awesome.dev" required />
+        <button class="btn">Subscribe</button>
+      </div>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+  </div>
+  <p class="small">© <span id="year"></span> FunLearn. Built with vanilla HTML, CSS & JS.</p>
+</footer>
+
+</body>
+</html>
